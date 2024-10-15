@@ -7,6 +7,7 @@
 #include "malloc.h"
 #include <arm_sve.h>
 
+#define LOG(...) do {printf("====="); printf(__VA_ARGS__); printf("=====\n"); } while (0)
 
 // signatures
 svfloat32_t generate_random_vector(svbool_t pg);
