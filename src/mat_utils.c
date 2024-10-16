@@ -1,14 +1,14 @@
 #include "mat_utils.h"
 
-float *generate_random_matrix(int rows, int cols) {
-    float *matrix = (float *)malloc(rows * cols * sizeof(float));
+double *generate_random_matrix(int rows, int cols) {
+    double *matrix = (double *)malloc(rows * cols * sizeof(double));
     for (int i = 0; i < rows * cols; i++) {
-        matrix[i] = (float)rand() / RAND_MAX;
+        matrix[i] = (double)rand() / RAND_MAX;
     }
     return matrix;
 }
 
-void print_matrix(float *matrix, int rows, int cols) {
+void print_matrix(double *matrix, int rows, int cols) {
     for (int i = 0; i < rows; i++) {
         for (int j = 0; j < cols; j++) {
             printf("%f ", matrix[i * cols + j]);
@@ -18,7 +18,7 @@ void print_matrix(float *matrix, int rows, int cols) {
     printf("\n");
 }
 
-void matrix_multiply(float *matrix1, float *matrix2, float *result, int m, int n, int k) {
+void matrix_multiply(double *matrix1, double *matrix2, double *result, int m, int n, int k) {
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < n; j++) {
             result[i * n + j] = 0;
