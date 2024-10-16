@@ -28,3 +28,12 @@ void matrix_multiply(double *matrix1, double *matrix2, double *result, int m, in
         }
     }
 }
+
+int matrix_compare(double *matrix1, double *matrix2, int rows, int cols, double epsilon) {
+    for (int i = 0; i < rows * cols; i++) {
+        if (fabs(matrix1[i] - matrix2[i]) > epsilon) {
+            return 0;
+        }
+    }
+    return 1;
+}

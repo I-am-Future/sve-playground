@@ -5,7 +5,7 @@ INCLUDES=-Iinclude
 TARGET=main
 
 # List all your .c files here
-SRC=src/main.c src/utils.c src/mat_utils.c
+SRC=src/main.c src/utils.c src/mat_utils.c src/tests.c
 
 # Automatically generate object file names from the source file names.
 OBJ=$(SRC:.c=.o)
