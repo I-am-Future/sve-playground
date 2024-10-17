@@ -40,8 +40,8 @@ void bl_micro_kernel(
 
 void mat_test_size(int m, int n, int k)
 {
-    double *matrix1 = generate_random_matrix(m, k);
-    double *matrix2 = generate_random_matrix(k, n);
+    double *matrix1 = gen_rand_mat_ROW(m, k);
+    double *matrix2 = gen_rand_mat_ROW(k, n);
     double *result = (double *)malloc(m * n * sizeof(double));
     double *result_ref = (double *)malloc(m * n * sizeof(double));
 
@@ -92,7 +92,9 @@ int main()
 
     // test5();
 
-    mat_test();
+    test6();
+
+    // mat_test();
 
     return 0;
 }

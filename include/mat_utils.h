@@ -4,7 +4,7 @@
 #include "stdlib.h"
 #include "math.h"
 
-double *generate_random_matrix(int rows, int cols);
+double *gen_rand_mat_ROW(int rows, int cols, int validrows, int validcols);
 
 void print_matrix(double *matrix, int rows, int cols);
 

@@ -24,8 +24,8 @@ void test1()
     LOG("Test on matrix multiplication");
 
     int m = 3, n = 4, k = 5;
-    double *matrix1 = generate_random_matrix(m, k);
-    double *matrix2 = generate_random_matrix(k, n);
+    double *matrix1 = gen_rand_mat_ROW(m, k);
+    double *matrix2 = gen_rand_mat_ROW(k, n);
     double *result = (double *)malloc(m * n * sizeof(double));
 
     print_matrix(matrix1, m, k);
@@ -141,8 +141,8 @@ void test4()
 {
     LOG("Test on matrix multiplication 2x4x4");
 
-    double *matrix1 = generate_random_matrix(2, 4);
-    double *matrix2 = generate_random_matrix(4, 4);
+    double *matrix1 = gen_rand_mat_ROW(2, 4);
+    double *matrix2 = gen_rand_mat_ROW(4, 4);
     double *result = (double *)malloc(2 * 4 * sizeof(double));
     double *result_ref = (double *)malloc(2 * 4 * sizeof(double));
 
@@ -166,8 +166,8 @@ void test5()
 {
     LOG("Test on matrix multiplication 4x4x4, with butterfly structure");
 
-    double *matrix1 = generate_random_matrix(4, 4);
-    double *matrix2 = generate_random_matrix(4, 4);
+    double *matrix1 = gen_rand_mat_ROW(4, 4);
+    double *matrix2 = gen_rand_mat_ROW(4, 4);
     double *result = (double *)malloc(4 * 4 * sizeof(double));
     double *result_ref = (double *)malloc(4 * 4 * sizeof(double));
 
@@ -179,5 +179,13 @@ void test5()
 
     print_matrix(result_ref, 4, 4);
     print_matrix(result, 4, 4);
+
+}
+
+
+void test6()
+{
+    LOG("Test on some matrix utils functions");
+
 
 }
